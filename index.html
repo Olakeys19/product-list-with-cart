@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="style.css" rel="stylesheet" />
+  <title>Frontend Mentor | Product list with cart</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Desserts</h1>
+  <div class="products-cart-container">
+    <div class="product-section">
+      <div class="products">
+        <div class="product-image-container">
+          <img src="assets/images/image-waffle-desktop.jpg" class="product-image" />
+          <div class="product-button">
+            <img src="assets/images/icon-add-to-cart.svg" class="cart">Add to Cart
+          </div>
+          <div class="quantity-selector hidden">
+            <button class="circle-button decrease">−</button>
+            <div class="quantity-number" id="quantity">1</div>
+            <button class="circle-button increase">+</button>
+          </div>
+        </div>
+        <div class="product-title">
+          <p>Waffle</p>
+        </div>
+        <div class="product-description">
+          <p>Waffle with Berries</p>
+        </div>
+        <div class="product-price">
+          <p>
+            $6.50
+          </p>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="product-image-container"><img src="assets/images/image-creme-brulee-desktop.jpg" class="product-image" />
+          <div class="product-button">
+            <img src="assets/images/icon-add-to-cart.svg" class="cart">Add to Cart
+          </div>
+          <div class="quantity-selector hidden">
+            <button class="circle-button decrease">−</button>
+            <div class="quantity-number" id="quantity">1</div>
+            <button class="circle-button increase">+</button>
+          </div>
+        </div>
+
+        <div class="product-title">
+          <p>Crème Brûlée</p>
+        </div>
+        <div class="product-description">
+          <p>Vanilla Bean Crème Brûlée</p>
+        </div>
+        <div class="product-price">
+          <p>
+            $7.00
+          </p>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="product-image-container"><img src="assets/images/image-macaron-desktop.jpg" class="product-image" />
+          <div class="product-button">
+            <img src="assets/images/icon-add-to-cart.svg" class="cart">Add to Cart
+          </div>
+          <div class="quantity-selector hidden">
+            <button class="circle-button decrease">−</button>
+            <div class="quantity-number" id="quantity">1</div>
+            <button class="circle-button increase">+</button>
+          </div>
+        </div>
+
+        <div class="product-title">
+          <p>Macaron</p>
+        </div>
+        <div class="product-description">
+          <p>Macaron Mix of Five</p>
+        </div>
+        <div class="product-price">
+          <p>
+            $8.00
+          </p>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="product-image-container"><img src="assets/images/image-tiramisu-desktop.jpg" class="product-image" />
+          <div class="product-button">
+            <img src="assets/images/icon-add-to-cart.svg" class="cart">Add to Cart
+          </div>
+          <div class="quantity-selector hidden">
+            <button class="circle-button decrease">−</button>
+            <div class="quantity-number" id="quantity">1</div>
+            <button class="circle-button increase">+</button>
+          </div>
+        </div>
+
+        <div class="product-title">
+          <p>Tiramisu</p>
+        </div>
+        <div class="product-description">
+          <p>Classic Tiramisu</p>
+        </div>
+        <div class="product-price">
+          <p>
+            $5.50
+          </p>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="product-image-container"><img src="assets/images/image-baklava-desktop.jpg" class="product-image" />
+          <div class="product-button">
+            <img src="assets/images/icon-add-to-cart.svg" class="cart">Add to Cart
+          </div>
+          <div class="quantity-selector hidden">
+            <button class="circle-button decrease">−</button>
+            <div class="quantity-number" id="quantity">1</div>
+            <button class="circle-button increase">+</button>
+          </div>
+        </div>
+
+        <div class="product-title">
+          <p>Baklava</p>
+        </div>
+        <div class="product-description">
+          <p>Pistachio Baklava</p>
+        </div>
+        <div class="product-price">
+          <p>
+            $4.00
+          </p>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="product-image-container"><img src="assets/images/image-meringue-desktop.jpg" class="product-image" />
+          <div class="product-button">
+            <img src="assets/images/icon-add-to-cart.svg" class="cart">Add to Cart
+          </div>
+          <div class="quantity-selector hidden">
+            <button class="circle-button decrease">−</button>
+            <div class="quantity-number" id="quantity">1</div>
+            <button class="circle-button increase">+</button>
+          </div>
+        </div>
+
+        <div class="product-title">
+          <p>Pie</p>
+        </div>
+        <div class="product-description">
+          <p>Lemon Meringue Pie</p>
+        </div>
+        <div class="product-price">
+          <p>
+            $5.00
+          </p>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="product-image-container"><img src="assets/images/image-cake-desktop.jpg" class="product-image" />
+          <div class="product-button">
+            <img src="assets/images/icon-add-to-cart.svg" class="cart">Add to Cart
+          </div>
+          <div class="quantity-selector hidden">
+            <button class="circle-button decrease">−</button>
+            <div class="quantity-number" id="quantity">1</div>
+            <button class="circle-button increase">+</button>
+          </div>
+        </div>
+
+        <div class="product-title">
+          <p>Cake</p>
+        </div>
+        <div class="product-description">
+          <p>Red Velvet Cake</p>
+        </div>
+        <div class="product-price">
+          <p>
+            $4.50
+          </p>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="product-image-container"><img src="assets/images/image-brownie-desktop.jpg" class="product-image" />
+          <div class="product-button">
+            <img src="assets/images/icon-add-to-cart.svg" class="cart">Add to Cart
+          </div>
+          <div class="quantity-selector hidden">
+            <button class="circle-button decrease">−</button>
+            <div class="quantity-number" id="quantity">1</div>
+            <button class="circle-button increase">+</button>
+          </div>
+        </div>
+
+        <div class="product-title">
+          <p>Brownie</p>
+        </div>
+        <div class="product-description">
+          <p>Salted Caramel Brownie</p>
+        </div>
+        <div class="product-price">
+          <p>
+            $4.50
+          </p>
+        </div>
+      </div>
+
+      <div class="products">
+        <div class="product-image-container"><img src="assets/images/image-panna-cotta-desktop.jpg" class="product-image" />
+          <div class="product-button">
+            <img src="assets/images/icon-add-to-cart.svg" class="cart">Add to Cart
+          </div>
+          <div class="quantity-selector hidden">
+            <button class="circle-button decrease">−</button>
+            <div class="quantity-number" id="quantity">1</div>
+            <button class="circle-button increase">+</button>
+          </div>
+        </div>
+
+        <div class="product-title">
+          <p>Panna Cotta</p>
+        </div>
+        <div class="product-description">
+          <p>Vanilla Panna Cotta</p>
+        </div>
+        <div class="product-price">
+          <p>
+            $6.50
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cart-container">
+      <h2 class="quantity">Your Cart (0)</h2>
+      <img src="assets/images/illustration-empty-cart.svg" class="cart-img">
+      <p1>Your added items will appear here</p1>
+      <div class="confirm-button">
+        Confirm Order
+      </div>
+    </div>
+
+  </div>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
