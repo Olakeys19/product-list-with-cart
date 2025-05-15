@@ -136,13 +136,13 @@ p {
 }
 
 .cart-container {
+  position: absolute;
   width: 30%;
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
   background-color: white;
-  position: absolute;
   left: 70%;
-  bottom: 82%;
+  bottom: 10%;
   padding: 20px;
   padding-bottom: 30px;
   text-align: center;
@@ -157,6 +157,66 @@ p {
   color: hsl(9, 3%, 41%);
 }
 
+.cart-container p2 {
+  display: block;
+  text-align: left;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+
+.cart-container p3 {
+  display: block;
+  text-align: left;
+}
+
+.cart-items {
+  border-bottom: solid 1px hsl(10, 3%, 59%);
+  padding: 20px;
+  position: relative;
+}
+
+.quant {
+  color: #b63c1f;
+}
+
+.iquant {
+  color: #b63c1f;
+}
+
+.price {
+  display: inline-block;
+  text-align: left;
+}
+.amt {
+  color: hsl(10, 3%, 59%);
+}
+
+.iamt {
+  color: hsl(10, 3%, 59%);
+}
+
+.xquantity {
+  color: hsl(0, 1%, 27%);
+}
+
+.cancel-button {
+  position: absolute;
+  border-radius: 50%;
+  border: solid 1px hsl(12, 3%, 37%);
+  color: hsl(12, 3%, 37%);
+  width: 26px;
+  height: 26px;
+  font-size: 18px;
+  font-family: sans-serif;
+  left: 85%;
+  bottom: 35%;
+  cursor: pointer;
+  transform: scale(0.8); /*normal size*/
+}
+
+.cancel-button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
 .cart-img {
   display: block;
   margin: 0 auto;
@@ -200,4 +260,134 @@ p {
 
 .quantity-number {
   font-weight: bold;
+}
+
+.total {
+  padding: 20px;
+  position: relative;
+}
+
+.cart-container p4 {
+  display: block;
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+.total-price {
+  display: inline;
+  margin-left: 120px;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.carbon-neutral {
+  position: relative;
+  border: none;
+  padding: 20px;
+  background-color: hsl(13, 100%, 96%);
+}
+#tree {
+  position: absolute;
+  margin: 0 auto;
+  left: 5%;
+}
+
+.order-confirmed-modal {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+
+  background-color: white;
+  /* padding: 6rem; */
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.order-confirmed-modal h1 {
+  font-size: 26px;
+}
+
+.confirmed-img {
+  width: 30px;
+  padding-bottom: 10px;
+}
+
+.order-confirmed-modal p {
+  font-size: 10px;
+  color: hsl(7, 20%, 60%);
+  padding-bottom: 20px;
+}
+
+.confirmed-item-container {
+  position: relative;
+  border-bottom: solid 1px rgb(219, 206, 206);
+  padding: 20px;
+  background-color: hsl(13, 100%, 96%);
+  border-radius: 10px;
+}
+
+.order-confirmed-modal p4 {
+  position: absolute;
+  left: 70%;
+  top: 35%;
+}
+
+.order-confirmed-modal p5 {
+  position: absolute;
+  left: 70%;
+  top: 30%;
+  font-size: 24px;
+}
+
+#total {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.confrmed-item {
+  border: none;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+#confirm {
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  width: 500px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+#picture {
+  width: 10%;
+  position: absolute;
+  bottom: 20%;
+  border-radius: 5px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25); /* subtle shadow */
+}
+
+.confirmed-item-container p2 {
+  margin-left: 70px;
+}
+
+.iquant {
+  margin-left: 70px;
+}
+
+.iamt {
+  margin-left: 10px;
 }
