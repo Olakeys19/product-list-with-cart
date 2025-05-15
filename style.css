@@ -11,14 +11,34 @@ body {
   padding: 50px;
 }
 
+.products-cart-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  display: flex;
+}
+
 .product-section {
-  /* border: solid black; */
   width: 70%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   padding-right: 2rem; /* reduce the gap between the columns */
 }
+
+.cart-container {
+  position: relative;
+  width: 30%;
+  height: fit-content;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  background-color: white;
+  padding: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+  /* margin-top: -3%; */
+}
+
 .products {
   font-size: 16px;
 }
@@ -128,26 +148,6 @@ p {
   margin-right: 10px;
 }
 
-.products-cart-container {
-  /* border: solid black; */
-  position: relative;
-  display: inline-block;
-  width: 100%;
-}
-
-.cart-container {
-  position: absolute;
-  width: 30%;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
-  background-color: white;
-  left: 70%;
-  bottom: 10%;
-  padding: 20px;
-  padding-bottom: 30px;
-  text-align: center;
-}
-
 .cart-container h2 {
   color: #d94c36;
   text-align: left;
@@ -227,7 +227,7 @@ p {
 }
 
 .confirm-button {
-  width: 260px;
+  width: 100%;
   padding: 10px 10px;
   background-color: hsl(14, 86%, 42%);
   color: #f4f4f4;
@@ -274,8 +274,10 @@ p {
 }
 
 .total-price {
+  position: absolute;
   display: inline;
-  margin-left: 120px;
+  left: 70%;
+  top: 25%;
   font-weight: bold;
   font-size: 24px;
 }
@@ -286,15 +288,21 @@ p {
   padding: 20px;
   background-color: hsl(13, 100%, 96%);
 }
+
+.carbon-neutral p {
+  position: relative;
+  margin-left: 5%;
+}
+
 #tree {
   position: absolute;
-  margin: 0 auto;
   left: 5%;
+  top: 34%;
 }
 
 .order-confirmed-modal {
   position: absolute;
-  top: 100%;
+  top: 92%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 40%;
@@ -332,15 +340,16 @@ p {
 
 .order-confirmed-modal p4 {
   position: absolute;
-  left: 70%;
+  left: 85%;
   top: 35%;
 }
 
 .order-confirmed-modal p5 {
   position: absolute;
-  left: 70%;
+  left: 79%;
   top: 30%;
   font-size: 24px;
+  font-weight: bold;
 }
 
 #total {
@@ -367,7 +376,7 @@ p {
   padding: 15px;
   text-align: center;
   font-size: 16px;
-  width: 500px;
+  width: 100%;
   margin-top: 30px;
   margin-bottom: 10px;
 }
@@ -390,4 +399,8 @@ p {
 
 .iamt {
   margin-left: 10px;
+}
+
+.attribution {
+  padding-top: 20px;
 }

@@ -76,17 +76,7 @@ const productNames = [
   "Vanilla Panna Cotta",
 ];
 
-const productPrices = [
-  "6.50",
-  "7.00",
-  "8.00",
-  "5.50",
-  "4.00",
-  "5.00",
-  "4.50",
-  "4.50",
-  "6.50",
-];
+const productPrices = [6.5, 7.0, 8.0, 5.5, 4.0, 5.0, 4.5, 4.5, 6.5];
 
 const SelProdPrices = [];
 
@@ -112,26 +102,26 @@ for (let i = 0; i < addToCart.length; i++) {
     document.getElementById("added-items").textContent = ""; // hide your added items will appear here
     prod[i].textContent = productNames[i]; // display product names in cart
     quant[i].textContent = `x${quantityList[i]}`; // display the quantity of the product in the cart
-    price[i].textContent = `@ $${productPrices[i]}`; // display the price of each item
+    price[i].textContent = `@ $${productPrices[i].toFixed(2)}`; // display the price of each item
 
     //CONFIRMED LOG
     iprod[i].textContent = productNames[i]; // display product names
     iquant[i].textContent = `x${quantityList[i]}`; // display the quantity of the product
-    iprice[i].textContent = `@ $${productPrices[i]}`; // display the price of each item
+    iprice[i].textContent = `@ $${productPrices[i].toFixed(2)}`; // display the price of each item
 
     //
-    itmAmt[i].textContent = `$${
+    itmAmt[i].textContent = `$${(
       Number(productPrices[i]) * Number(quantityList[i])
-    }`; // display the price amount of each item
+    ).toFixed(2)}`; // display the price amount of each item
     //
-    iitmAmt[i].textContent = `$${
+    iitmAmt[i].textContent = `$${(
       Number(productPrices[i]) * Number(quantityList[i])
-    }`; // display the price
+    ).toFixed(2)}`; // display the price
 
     //
     sum = sum + Number(productPrices[i]);
-    totalPrice.textContent = `$${sum}`;
-    itotalPrice.textContent = `$${sum}`;
+    totalPrice.textContent = `$${sum.toFixed(2)}`;
+    itotalPrice.textContent = `$${sum.toFixed(2)}`;
 
     //
     SelProdPrices[i] = Number(productPrices[i]);
@@ -173,8 +163,8 @@ for (let i = 0; i < cancelButton.length; i++) {
 
     document.querySelector(".quantity").textContent = `Your Cart (${quantity})`; // display the updated cart quantity;
 
-    totalPrice.textContent = `$${sum}`;
-    itotalPrice.textContent = `$${sum}`;
+    totalPrice.textContent = `$${sum.toFixed(2)}`;
+    itotalPrice.textContent = `$${sum.toFixed(2)}`;
 
     //
     document.querySelector(".quantity").textContent = `Your Cart (${quantity})`; // display the updated cart quantity;
@@ -209,17 +199,17 @@ for (let i = 0; i < increaseBtn.length; i++) {
     quant[i].textContent = `x${quantityList[i]}`; // display the quantity of the product in the cart
     iquant[i].textContent = `x${quantityList[i]}`; // display the quantity of the product
 
-    itmAmt[i].textContent = `$${
+    itmAmt[i].textContent = `$${(
       Number(productPrices[i]) * Number(quantityList[i])
-    }`; // display the price amount of each item
-    iitmAmt[i].textContent = `$${
+    ).toFixed(2)}`; // display the price amount of each item
+    iitmAmt[i].textContent = `$${(
       Number(productPrices[i]) * Number(quantityList[i])
-    }`; // display the price amount of each item
+    ).toFixed(2)}`; // display the price amount of each item
 
     //
     sum = sum + Number(productPrices[i]); // add the price of product after each iteration
-    totalPrice.textContent = `$${sum}`; // display total price
-    itotalPrice.textContent = `$${sum}`; // display total price
+    totalPrice.textContent = `$${sum.toFixed(2)}`; // display total price
+    itotalPrice.textContent = `$${sum.toFixed(2)}`; // display total price
 
     console.log(quantityList);
     console.log(cartItems);
@@ -242,17 +232,17 @@ for (let i = 0; i < decreaseBtn.length; i++) {
       quant[i].textContent = `x${quantityList[i]}`; // display the quantity of the product in the cart
       iquant[i].textContent = `x${quantityList[i]}`; // display the quantity of the product
 
-      itmAmt[i].textContent = `$${
+      itmAmt[i].textContent = `$${(
         Number(productPrices[i]) * Number(quantityList[i])
-      }`; // display the price amount of each item
-      iitmAmt[i].textContent = `$${
+      ).toFixed(2)}`; // display the price amount of each item
+      iitmAmt[i].textContent = `$${(
         Number(productPrices[i]) * Number(quantityList[i])
-      }`; //
+      ).toFixed(2)}`; //
 
       //
       sum = sum - Number(productPrices[i]); // add the price of product after each iteration
-      totalPrice.textContent = `$${sum}`; // display total price
-      itotalPrice.textContent = `$${sum}`; //
+      totalPrice.textContent = `$${sum.toFixed(2)}`; // display total price
+      itotalPrice.textContent = `$${sum.toFixed(2)}`; //
 
       console.log(quantityList);
       console.log(cartItems);
@@ -275,8 +265,8 @@ for (let i = 0; i < decreaseBtn.length; i++) {
       //
       cartProducts[i].classList.add("hidden"); // remove hidden class from added cart product
       sum = sum - Number(productPrices[i]); // add the price of product after each iteration
-      totalPrice.textContent = `$${sum}`; // display total price
-      itotalPrice.textContent = `$${sum}`; // display total price
+      totalPrice.textContent = `$${sum.toFixed(2)}`; // display total price
+      itotalPrice.textContent = `$${sum.toFixed(2)}`; // display total price
 
       console.log(quantityList);
       console.log(cartItems);
