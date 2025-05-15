@@ -103,6 +103,10 @@ p {
   transition: background-color 0.3s, color 0.3s;
 }
 
+.product-button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
 .quantity-selector {
   position: absolute;
   bottom: -15px; /* Adjust to move it up/down */
