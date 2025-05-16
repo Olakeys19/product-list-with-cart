@@ -28,6 +28,10 @@ const itotalPrice = document.querySelector(".itotal-price");
 const cancelButton = document.querySelectorAll(".cancel-button");
 const btnAmount = document.querySelectorAll(".quantity-number");
 
+const productsCartContainer = document.querySelector(
+  ".products-cart-container"
+);
+
 function reset() {
   sum = 0;
   totalAmt = 0;
@@ -50,6 +54,8 @@ function reset() {
   document.getElementById("added-items").textContent =
     "Your added items will appear here";
   carbonNeutral.classList.add("hidden");
+  productsCartContainer.classList.add("products-cart-container");
+  productsCartContainer.classList.remove("hidden");
 }
 
 let sum = 0;
@@ -101,12 +107,12 @@ for (let i = 0; i < addToCart.length; i++) {
     // console.log(cart);
     document.getElementById("added-items").textContent = ""; // hide your added items will appear here
     prod[i].textContent = productNames[i]; // display product names in cart
-    quant[i].textContent = `x${quantityList[i]}`; // display the quantity of the product in the cart
+    quant[i].textContent = `${quantityList[i]}x`; // display the quantity of the product in the cart
     price[i].textContent = `@ $${productPrices[i].toFixed(2)}`; // display the price of each item
 
     //CONFIRMED LOG
     iprod[i].textContent = productNames[i]; // display product names
-    iquant[i].textContent = `x${quantityList[i]}`; // display the quantity of the product
+    iquant[i].textContent = `${quantityList[i]}x`; // display the quantity of the product
     iprice[i].textContent = `@ $${productPrices[i].toFixed(2)}`; // display the price of each item
 
     //
@@ -196,8 +202,8 @@ for (let i = 0; i < increaseBtn.length; i++) {
     quantity++; // increase quantity after each iteration
     document.querySelector(".quantity").textContent = `Your Cart (${quantity})`; // display updated cart quantity
 
-    quant[i].textContent = `x${quantityList[i]}`; // display the quantity of the product in the cart
-    iquant[i].textContent = `x${quantityList[i]}`; // display the quantity of the product
+    quant[i].textContent = `${quantityList[i]}x`; // display the quantity of the product in the cart
+    iquant[i].textContent = `${quantityList[i]}x`; // display the quantity of the product
 
     itmAmt[i].textContent = `$${(
       Number(productPrices[i]) * Number(quantityList[i])
@@ -229,8 +235,8 @@ for (let i = 0; i < decreaseBtn.length; i++) {
         ".quantity"
       ).textContent = `Your Cart (${quantity})`; // display updated cart quantity
       // document.getElementById("added-items").textContent = cartItems; // display the added items in the cart;
-      quant[i].textContent = `x${quantityList[i]}`; // display the quantity of the product in the cart
-      iquant[i].textContent = `x${quantityList[i]}`; // display the quantity of the product
+      quant[i].textContent = `${quantityList[i]}x`; // display the quantity of the product in the cart
+      iquant[i].textContent = `${quantityList[i]}x`; // display the quantity of the product
 
       itmAmt[i].textContent = `$${(
         Number(productPrices[i]) * Number(quantityList[i])
@@ -259,8 +265,8 @@ for (let i = 0; i < decreaseBtn.length; i++) {
         ".quantity"
       ).textContent = `Your Cart (${quantity})`; // display updated cart quantity
       // document.getElementById("added-items").textContent = cartItems; // display the added items in the cart;
-      quant[i].textContent = `x${quantityList[i]}`; // display the quantity of the product in the cart
-      iquant[i].textContent = `x${quantityList[i]}`; // display the quantity of the product in the cart
+      quant[i].textContent = `${quantityList[i]}x`; // display the quantity of the product in the cart
+      iquant[i].textContent = `${quantityList[i]}x`; // display the quantity of the product in the cart
 
       //
       cartProducts[i].classList.add("hidden"); // remove hidden class from added cart product
@@ -290,6 +296,8 @@ for (let i = 0; i < decreaseBtn.length; i++) {
 confirmButton.addEventListener("click", function () {
   document.querySelector(".center-wrapper").classList.remove("hidden");
   document.querySelector(".overlay").classList.remove("hidden");
+  productsCartContainer.classList.add("hidden");
+  productsCartContainer.classList.remove("products-cart-container");
 });
 
 startNewOrderButton.addEventListener("click", reset);
