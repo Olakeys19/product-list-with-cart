@@ -46,4 +46,4 @@ Users should be able to:
 ## Author
 
 - Author - [Sharon Ogo-Ayorinde]
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/olakeys19)
+- Frontend Mentor - [@olakeys19](https://www.frontendmentor.io/profile/olakeys19)
