@@ -54,6 +54,7 @@ function reset() {
   document.getElementById("added-items").textContent =
     "Your added items will appear here";
   carbonNeutral.classList.add("hidden");
+  carbonNeutral.classList.remove("carbon-neutral");
   productsCartContainer.classList.add("products-cart-container");
   productsCartContainer.classList.remove("hidden");
 }
@@ -90,6 +91,7 @@ let quantityList = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 const quantityDisplay = document.querySelectorAll(".quantity-number");
 
 confirmButton.classList.add("hidden"); // hide the confirm order button
+carbonNeutral.classList.remove("carbon-neutral");
 
 for (let i = 0; i < addToCart.length; i++) {
   quantity = 0;
@@ -141,6 +143,7 @@ for (let i = 0; i < addToCart.length; i++) {
     addToCart[i].classList.add("hidden");
     quantitySelector[i].classList.remove("hidden");
     carbonNeutral.classList.remove("hidden");
+    carbonNeutral.classList.add("carbon-neutral");
 
     // console.log(quantityList);
     console.log(sum);
@@ -177,6 +180,7 @@ for (let i = 0; i < cancelButton.length; i++) {
     if (sum === 0) {
       total.classList.add("hidden");
       carbonNeutral.classList.add("hidden");
+      carbonNeutral.classList.remove("carbon-neutral");
       quantity = 0;
       if (quantity === 0) {
         document.getElementById("added-items").textContent =
@@ -185,6 +189,7 @@ for (let i = 0; i < cancelButton.length; i++) {
         confirmButton.classList.add("hidden"); // hide the confirm order button if there is no item in the cart
         total.classList.add("hidden");
         carbonNeutral.classList.add("hidden");
+        carbonNeutral.classList.remove("carbon-neutral");
         document.querySelector(
           ".quantity"
         ).textContent = `Your Cart (${quantity})`; // display the updated cart quantity;
@@ -284,6 +289,7 @@ for (let i = 0; i < decreaseBtn.length; i++) {
         confirmButton.classList.add("hidden"); // hide the confirm order button if there is no item in the cart
         total.classList.add("hidden");
         carbonNeutral.classList.add("hidden");
+        carbonNeutral.classList.remove("carbon-neutral");
         document.querySelector(
           ".quantity"
         ).textContent = `Your Cart (${quantity})`; // display updated cart quantity
