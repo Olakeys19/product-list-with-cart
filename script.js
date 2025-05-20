@@ -61,12 +61,12 @@ function reset() {
 
 let sum = 0;
 let totalAmt = 0;
-console.log(cartProducts);
+// console.log(cartProducts);
 
-console.log(prod);
+// console.log(prod);
 
 let cartQuantity = document.querySelector(".quantity").textContent;
-console.log(cartQuantity);
+// console.log(cartQuantity);
 let quantity = 0;
 
 const cart = [];
@@ -139,21 +139,20 @@ for (let i = 0; i < addToCart.length; i++) {
     icartProducts[i].classList.remove("hidden"); // remove hidden class from added cart product
 
     //
-    console.log(cartItems);
+    // console.log(cartItems);
     addToCart[i].classList.add("hidden");
     quantitySelector[i].classList.remove("hidden");
     carbonNeutral.classList.remove("hidden");
     carbonNeutral.classList.add("carbon-neutral");
 
     // console.log(quantityList);
-    console.log(sum);
-    console.log(SelProdPrices);
+    // console.log(sum);
+    // console.log(SelProdPrices);
   });
 }
 
 for (let i = 0; i < cancelButton.length; i++) {
   cancelButton[i].addEventListener("click", function () {
-    console.log("not clicked");
     cartProducts[i].classList.add("hidden");
     // sum = sum - SelProdPrices[i];
     // SelProdPrices[i] = 0;
@@ -162,8 +161,8 @@ for (let i = 0; i < cancelButton.length; i++) {
     SelProdPrices[i] = 0;
     quantityList[i] = 0;
 
-    console.log(sum);
-    console.log(SelProdPrices);
+    // console.log(sum);
+    // console.log(SelProdPrices);
     quantitySelector[i].classList.add("hidden");
     addToCart[i].classList.remove("hidden");
     productImg[i].classList.remove("product-outline");
@@ -222,9 +221,9 @@ for (let i = 0; i < increaseBtn.length; i++) {
     totalPrice.textContent = `$${sum.toFixed(2)}`; // display total price
     itotalPrice.textContent = `$${sum.toFixed(2)}`; // display total price
 
-    console.log(quantityList);
-    console.log(cartItems);
-    console.log(sum);
+    // console.log(quantityList);
+    // console.log(cartItems);
+    // console.log(sum);
   });
 }
 
@@ -255,8 +254,8 @@ for (let i = 0; i < decreaseBtn.length; i++) {
       totalPrice.textContent = `$${sum.toFixed(2)}`; // display total price
       itotalPrice.textContent = `$${sum.toFixed(2)}`; //
 
-      console.log(quantityList);
-      console.log(cartItems);
+      // console.log(quantityList);
+      // console.log(cartItems);
     } else {
       quantityList[i] = 0;
       productImg[i].classList.remove("product-outline");
@@ -279,8 +278,8 @@ for (let i = 0; i < decreaseBtn.length; i++) {
       totalPrice.textContent = `$${sum.toFixed(2)}`; // display total price
       itotalPrice.textContent = `$${sum.toFixed(2)}`; // display total price
 
-      console.log(quantityList);
-      console.log(cartItems);
+      // console.log(quantityList);
+      // console.log(cartItems);
 
       if (quantity === 0) {
         document.getElementById("added-items").textContent =
