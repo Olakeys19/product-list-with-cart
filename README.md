@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://olakeys19.github.io/product-list-with-cart/)
+- Solution URL: (https://github.com/Olakeys19/product-list-with-cart)
 - Live Site URL: (https://olakeys19.github.io/product-list-with-cart/)
 
 ## My process
